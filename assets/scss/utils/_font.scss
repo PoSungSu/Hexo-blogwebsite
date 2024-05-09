@@ -1,0 +1,20 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans-tc {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    // font-weight: <weight>;
+    font-style: normal;
+  }
+
+// <uniquifier>: Use a unique and descriptive class name
+// <width>: Use a value from 75 to 125
+
+.tourney {
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    // font-variation-settings:"wdth" <width>;
+  }
