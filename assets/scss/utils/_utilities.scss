@@ -1,7 +1,7 @@
 $utilities: map-merge(
   $utilities,
   (
-    //add
+    //add 新增
     "letter-spacing": (
       property: letter-spacing,
       class: fs-letter,
@@ -31,8 +31,9 @@ $utilities: map-merge(
         responsive: true,
         class: bg-p,
         values: (
-          top:    top,
+          t:    top,
           center: center center,
+          b: bottom,
         )
     ),
     "background-repeat": (
@@ -48,6 +49,10 @@ $utilities: map-merge(
     // Make an existing utility responsive()
     "font-size": map-merge(
       map-get($utilities, "font-size"),
+      ( responsive: true ),
+    ),
+    "line-height": map-merge(
+      map-get($utilities, "line-height"),
       ( responsive: true ),
     ),
     "border-bottom": map-merge(
@@ -70,7 +75,7 @@ $utilities: map-merge(
       map-get($utilities, "width"),
       ( responsive: true ),
     ),
-    //
+    //針對值增加選項
     "text-align": map-merge(
       map-get($utilities, "text-align"),
       (
@@ -79,7 +84,23 @@ $utilities: map-merge(
           (justify: justify),
         )
       )
-    )
+    ),
 
+
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "line-height": map-merge(
+      map-get($utilities, "line-height"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "line-height"), "values"),
+          (headings: $headings-line-height),
+        )
+      )
+    )
   )
 );

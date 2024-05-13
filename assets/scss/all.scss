@@ -3,8 +3,12 @@
 
 //custom utils
 @import "./utils/variables";
+
+
 @import "./utils/customColor";
 @import "./utils/customValues";
+@import "./utils/fonts";
+@import "./utils/icons";
 
 //layout
 @import './layout/header.scss';
@@ -31,7 +35,8 @@
 @import "../../node_modules/bootstrap/scss/reboot";
 
 //custom base
-@import "../scss/base/base";
+@import "./base/base";
+@import "./base/googleFonts";
 
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/images";
@@ -71,3 +76,6 @@
 //==5.3版end==
 
 //custom components
+@import "../scss/components/buttons";
+@import "../scss/components/pagination";
+@import "/assets/scss/components/abs-imgMark";

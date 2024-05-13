@@ -1,0 +1,11 @@
+@mixin square($square-side-length) {
+    width: $square-side-length;
+    height: $square-side-length;
+}
+
+.page {
+    &-link {
+        @include square(40px);
+        // padding: 2px 13px;
+    }
+}
